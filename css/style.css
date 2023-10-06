@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'OmegaSans';
+    src: url(/fonts/OmegaSans.ttf);
+}
+
+.logo-commercial img{
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
