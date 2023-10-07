@@ -8,6 +8,6 @@
     filter: invert(1);
 }
 
-.commercial-card{
-    background:linear-gradient(135deg, #e3e3e3 0%,#5D6874 100%);
+.card{
+    background:rgba(0, 0, 0, 0.1);
 }
