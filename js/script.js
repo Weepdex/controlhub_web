@@ -2,14 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var theme = document.body.getAttribute("data-bs-theme");
     var btn = document.getElementById('themeChanger');
     var logo = document.getElementById("logo");
+    var obs = document.getElementById("obs");
     if (theme === "dark" || !theme) {
         btn.style.color = "lightblue"
         logo.style.webkitFilter = "invert(1)";
         logo.style.filter = "invert(1)";
+        obs.style.webkitFilter = "invert(1)";
+        obs.style.filter = "invert(1)";
     } else {
         btn.style.color = "darkblue"
         logo.style.webkitFilter = "";
         logo.style.filter = "";
+        obs.style.webkitFilter = "";
+        obs.style.filter = "";
     }
 
     const langSelect = document.getElementById('lang');
@@ -29,16 +34,21 @@ function themeChange(){
     var theme = document.body.getAttribute("data-bs-theme");
     var btn = document.getElementById('themeChanger');
     var logo = document.getElementById("logo");
+    var obs = document.getElementById("obs");
     if (theme === "dark" || !theme) {
         document.body.setAttribute("data-bs-theme", "light");
         btn.style.color = "darkblue"
         logo.style.webkitFilter = "";
         logo.style.filter = "";
+        obs.style.webkitFilter = "";
+        obs.style.filter = "";
     } else {
         document.body.setAttribute("data-bs-theme", "dark");
         btn.style.color = "lightblue"
         logo.style.webkitFilter = "invert(1)";
         logo.style.filter = "invert(1)";
+        obs.style.webkitFilter = "invert(1)";
+        obs.style.filter = "invert(1)";
     }
 }
 
