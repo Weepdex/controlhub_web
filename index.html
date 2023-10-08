@@ -15,45 +15,45 @@
 </head>
 
 <body data-bs-theme="dark">
-    <div lang="tr" >
-        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">
-                    <img src="images/controlhub_logo.png" height="40px" id="logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#desteklenen-uygulama-ve-platformlar">Desteklenen Uygulama Ve Platformlar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#platform-ve-indirme">İndir</a>
-                        </li>
-                    </ul>
-                    <div class="row ms-lg-5 ms-md-0">
-                        <div class="col-lg-3 col-md-9 col-sm-9 d-flex align-items-center">
-                            <a onclick="themeChange()">
-                                <i class="fa-solid fa-moon" id="themeChanger"></i>
-                            </a>
-                        </div>
-                        <div class="col-lg-9 col-md-3 col-sm-3">
-                            <select id="lang" class="form-control col-1 col-md-3">
-                                <option value="tr">Türkçe</option>
-                                <option value="eng">English</option>
-                            </select>
-                        </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="images/controlhub_logo.png" style="height: 30px;" id="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#desteklenen-uygulama-ve-platformlar">Desteklenen Uygulama Ve Platformlar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#platform-ve-indirme">İndir</a>
+                    </li>
+                </ul>
+                <div class="row ms-lg-5 ms-md-0">
+                    <div class="col-lg-3 col-md-9 col-sm-9 d-flex align-items-center">
+                        <a onclick="themeChange()">
+                            <i class="fa-solid fa-moon" id="themeChanger"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-9 col-md-3 col-sm-3">
+                        <select id="lang" class="form-control col-1 col-md-3">
+                            <option value="tr">Türkçe</option>
+                            <option value="en">English</option>
+                        </select>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <div lang="tr" >
         <div class="container my-3">
             <div class="row gy-2 gx-2">
                 <div class="col-lg-5 col-md-5 col-sm-12">
@@ -187,7 +187,7 @@
             </ul>
         </footer>
     </div>
-    <div lang="eng">
+    <div lang="en">
         <div class="container py-3">
             <div class="row d-flex justify-content-between rounded-5"
                 style="background:linear-gradient(135deg, #424242 0%,#757d86 100%)">
