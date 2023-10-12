@@ -52,3 +52,7 @@ h1, h2, h3, h4{
         rgba(184, 184, 184, 1) 100%
     );
 }
+
+#platform-ve-indirme .aciklama{
+    min-height: 120px;
+}

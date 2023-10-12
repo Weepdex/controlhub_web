@@ -1,333 +1,265 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="css/style.css"  rel="stylesheet"/>
-        <link rel="icon" href="images/controlhub_logow.png" />
-        <title>ControlHub</title>
-    </head>
 
-    <body data-bs-theme="dark">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-            <div class="container-fluid navbarLang">
-                <a class="navbar-brand" href="/controlhub_web">
-                    <img src="images/controlhub_logo.png" style="height: 30px;" class="logo">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="icon" href="images/controlhub_logow.png" />
+    <title>ControlHub</title>
+</head>
+
+<body data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid navbarLang">
+            <a class="navbar-brand" href="/controlhub_web">
+                <img src="images/controlhub_logo.png" style="height: 30px; filter: invert(1);" id="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#anasayfa" id="navlinkmain">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#desteklenen-uygulamalar" id="navlinksupapps">Desteklenen
+                            Uygulamalar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#platform-ve-indirme" id="navlinkdownload">İndir</a>
+                    </li>
+                </ul>
+                <div class="row ms-lg-5 ms-md-0 pe-lg-2">
+                    <div class="col-lg-3 col-md-9 col-sm-9 d-flex align-items-center">
+                        <a onclick="themeChange()">
+                            <i class="fa-solid fa-moon" id="themeChanger" style="color: lightblue;"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-9 col-md-3 col-sm-3 d-flex">
+                        <select id="languageSelect" onchange="setLanguage(this.value)" class="form-control">
+                            <option value="tr">Türkçe</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div id="anasayfa" class="container my-3">
+            <div class="row gy-2 gx-2">
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                    <div class="rounded-4 p-3 overflow-hidden"
+                        style="max-height: 350px; min-height: 300px;background: linear-gradient(45deg,rgba(116, 127, 150, 1) 16%,rgba(37, 51, 79, 1) 99%)">
+                        <div id="teltext" class="text-center py-1 text-white align-self-center"
+                            style="font-size: 24px; font-weight: bold;">
+                            TELEFONUNUZU CONTROLHUB'A DÖNÜŞTÜRÜN
+                        </div>
+                        <div class="mx-auto text-center">
+                            <img src="images/phone_tr.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                    <div class="rounded-4 p-3 overflow-hidden"
+                        style="max-height: 350px; min-height: 300px;background: linear-gradient(45deg,rgba(37, 51, 79, 1) 16%,rgba(116, 127, 150, 1) 99%)">
+                        <div id="laptoptext" class="text-center py-1 text-white align-self-center"
+                            style="font-size: 24px; font-weight: bold;">
+                            BİLGİSAYARINIZDAN BUTONLARI KONTROL EDİN
+                        </div>
+                        <div class="mx-auto text-center">
+                            <img src="images/computer_tr.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="desteklenen-uygulamalar">
+            <div class="container px-4 py-5 pb-3">
+                <h2 id="supportedappsheader" class="pb-2 border-bottom">Desteklenen Uygulamalar</h2>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+                    <div class="col text-center">
+                        <div class="card card-discord border-0 rounded-4 px-1 pt-5">
+                            <i class="fa-brands fa-discord fa-2xl pb-3" style="color: #5662f6;"></i>
+                            <div>
+                                <h3>Discord</h3>
+                                <p id="dc">Mikrofonu susturma, kulaklığı sağırlaştırma.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="card card-spotify border-0 rounded-4 pt-5">
+                            <i class="fa-brands fa-spotify fa-2xl pb-3" style="color: #1ed760;"></i>
+                            <div>
+                                <h3>Spotify</h3>
+                                <p id="spotify">Şarkı başlatma, durdurma, devam ettirme.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="card card-twitch border-0 rounded-4 pt-5">
+                            <i class="fa-brands fa-twitch fa-2xl pb-3" style="color: #a970ff;"></i>
+                            <div>
+                                <h3>Twitch</h3>
+                                <p id="twitch">Yayın başlatma, durdurma, devam ettirme.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="card card-obs border-0 rounded-4" style="padding-top: 1.7rem;">
+                            <img src="images/obs_logo.svg" height="35px">
+                            <div>
+                                <h3>OBS</h3>
+                                <p id="obs">Kaydı başlatma, durdurma, devam ettirme özellikleri.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="platform-ve-indirme">
+            <div class="container px-4 py-5">
+                <h2 class="pb-2 border-bottom" id="downloadheader">Desteklenen Platformlar</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square text-body-emphasis bg-primary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 rounded-3">
+                            <i class="fa-brands fa-windows p-2"></i>
+                        </div>
+                        <div class="d-flex row">
+                            <div class="aciklama">
+                                <h3 class="fs-2 text-body-emphasis">Windows</h3>
+                                <p id="windows">Uygulamayı indirip telefon arayüzündeki butonları yönetin.</p>
+                            </div>
+                            <a href="document.html" class="btn btn-primary p-2 d-flex col-5 align-items-center">
+                                <i class="fa fa-download p-2"></i>
+                                <div id="windowsbtn">Windows için indir</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square text-body-emphasis bg-success d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 rounded-3">
+                            <i class="fa-brands fa-android p-2"></i>
+                        </div>
+                        <div class="d-flex row">
+                            <div class="aciklama">
+                                <h3 class="fs-2 text-body-emphasis">Android</h3>
+                                <p id="android">ControlHub'ı Android cihazınıza indirin ve bilgisayardan oluşturduğunuz kısayolları kullanın.</p>
+                            </div>
+                            <a href="https://play.google.com/store/apps/dev?id=5700313618786177705&hl=tr"
+                                class="btn btn-success d-flex col-5 align-items-center">
+                                <i class="fa-brands fa-google-play p-2"></i>
+                                <div id="androidbtn">Android için indir</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item" lang="tr">
-                            <a class="nav-link" aria-current="page" href="#anasayfa" onclick="scrollToTop()">Anasayfa</a>
-                        </li>
-                        <li class="nav-item" lang="tr">
-                            <a class="nav-link" href="#desteklenen-uygulamalar">Desteklenen Uygulamalar</a>
-                        </li>
-                        <li class="nav-item" lang="tr">
-                            <a class="nav-link" href="#platform-ve-indirme">İndir</a>
-                        </li>
-                        <li class="nav-item" lang="en">
-                            <a class="nav-link" aria-current="page" href="#main">Home</a>
-                        </li>
-                        <li class="nav-item" lang="en">
-                            <a class="nav-link" href="#supported-apps">Supported Apps</a>
-                        </li>
-                        <li class="nav-item" lang="en">
-                            <a class="nav-link" href="#platform-and-download">Download</a>
-                        </li>
-                    </ul>
-                    <div class="row ms-lg-5 ms-md-0">
-                        <div class="col-lg-3 col-md-9 col-sm-9 d-flex align-items-center">
-                            <a onclick="themeChange()">
-                                <i class="fa-solid fa-moon themeChanger"></i>
-                            </a>
-                        </div>
-                        <div class="col-lg-9 col-md-3 col-sm-3">
-                            <select id="lang" class="form-control col-1 col-md-3">
-                                <option value="tr">Türkçe</option>
-                                <option value="en">English</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Weepdex, Inc</span>
             </div>
-        </nav>
-        <div lang="tr">
-            <div id="anasayfa" class="container py-5">
-                <div class="row gy-2 gx-2">
-                    <div class="col-lg-5 col-md-5 col-sm-12">
-                        <div class="rounded-4 p-3 overflow-hidden" style="max-height: 350px; min-height: 300px;background: linear-gradient(45deg,rgba(116, 127, 150, 1) 16%,rgba(37, 51, 79, 1) 99%)">
-                            <div class="text-center py-1 text-white align-self-center" style="font-size: 24px; font-weight: bold;">
-                                TELEFONUNUZU CONTROLHUB'A DÖNÜŞTÜRÜN
-                            </div>
-                            <div class="mx-auto text-center">
-                                <img src="images/phone_tr.png" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-sm-12">
-                        <div class="rounded-4 p-3 overflow-hidden" style="max-height: 350px; min-height: 300px;background: linear-gradient(45deg,rgba(37, 51, 79, 1) 16%,rgba(116, 127, 150, 1) 99%)">
-                            <div class="text-center py-1 text-white align-self-center" style="font-size: 24px; font-weight: bold;">
-                                BİLGİSAYARINIZDAN BUTONLARI KONTROL EDİN
-                            </div>
-                            <div class="mx-auto text-center">
-                                <img src="images/computer_tr.png" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="desteklenen-uygulamalar">
-                <div class="container px-4 py-5 pb-3">
-                    <h2 class="pb-2 border-bottom">Desteklenen Uygulamalar</h2>
-                
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-                        <div class="col text-center">
-                            <div class="card card-discord border-0 rounded-4 px-1 pt-5">
-                                <i class="fa-brands fa-discord fa-2xl pb-3" style="color: #5662f6;"></i>
-                                <div>
-                                    <h3>Discord</h3>
-                                    <p>Mikrofonu susturma, kulaklığı sağırlaştırma.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center">
-                            <div class="card card-spotify border-0 rounded-4 pt-5">
-                                <i class="fa-brands fa-spotify fa-2xl pb-3" style="color: #1ed760;"></i>
-                                <div>
-                                    <h3>Spotify</h3>
-                                    <p>Şarkı başlatma, durdurma, devam ettirme.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center">
-                            <div class="card card-twitch border-0 rounded-4 pt-5">
-                                <i class="fa-brands fa-twitch fa-2xl pb-3" style="color: #a970ff;"></i>
-                                <div>
-                                    <h3>Twitch</h3>
-                                    <p>Yayın başlatma, durdurma, devam ettirme.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center">
-                            <div class="card card-obs border-0 rounded-4" style="padding-top: 1.7rem;">
-                                <img src="images/obs_logo.svg" height="35px">
-                                <div>
-                                    <h3>OBS</h3>
-                                    <p>Kaydı başlatma, durdurma, devam ettirme özellikleri.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="platform-ve-indirme">
-                <div class="container px-4 py-5">
-                    <h2 class="pb-2 border-bottom">Desteklenen Platformlar</h2>
-                    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-                        <div class="col d-flex align-items-start">
-                            <div class="icon-square text-body-emphasis bg-primary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 rounded-3">
-                                <i class="fa-brands fa-windows p-2"></i>
-                            </div>
-                            <div>
-                            <h3 class="fs-2 text-body-emphasis">Windows</h3>
-                            <p>Uygulamayı indirip telefon arayüzündeki butonları yönetin.</p>
-                            <a href="document.html" class="btn btn-primary p-2">
-                                <i class="fa fa-download p-2"></i>
-                                Windows için indir
-                            </a>
-                            </div>
-                        </div>
-                        <div class="col d-flex align-items-start">
-                            <div class="icon-square text-body-emphasis bg-success d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 rounded-3">
-                                <i class="fa-brands fa-android p-2"></i>
-                            </div>
-                            <div>
-                            <h3 class="fs-2 text-body-emphasis">Android</h3>
-                            <p>ControlHub'ı Android cihazınıza indirin ve bilgisayardan oluşturduğunuz kısayolları kullanın.</p>
-                            <a href="https://play.google.com/store/apps/dev?id=5700313618786177705&hl=tr" class="btn btn-success">
-                                <i class="fa-brands fa-google-play p-2"></i>
-                                Android için indir
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                        <svg class="bi" width="30" height="24">
-                            <use xlink:href="#bootstrap"></use>
-                        </svg>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="text-body-secondary" href="#">
+                        <i class="fa-brands fa-square-x-twitter"></i>
                     </a>
-                    <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Weepdex, Inc</span>
-                </div>
-
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3">
-                        <a class="text-body-secondary" href="#">
-                            <i class="fa-brands fa-square-x-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="ms-3">
-                        <a class="text-body-secondary" href="#">
-                            <i class="fa-brands fa-square-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="ms-3">
-                        <a class="text-body-secondary" href="#">
-                            <i class="fa-brands fa-square-facebook"></i>
-                        </a>
-                    </li>
-                </ul>
-            </footer>
-        </div>
-        <div lang="en">
-            <div id="main" class="container py-5">
-                <div class="row gy-2 gx-2">
-                    <div class="col-lg-5 col-md-5 col-sm-12">
-                        <div class="rounded-4 p-3 overflow-hidden" style="max-height: 350px; min-height: 300px;background: linear-gradient(45deg,rgba(116, 127, 150, 1) 16%,rgba(37, 51, 79, 1) 99%)">
-                            <div class="text-center py-1 text-white align-self-center" style="font-size: 24px; font-weight: bold;">
-                                TURN YOUR PHONE INTO CONTROLHUB
-                            </div>
-                            <div class="mx-auto text-center">
-                                <img src="images/phone_en.png" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-sm-12">
-                        <div class="rounded-4 p-3 overflow-hidden" style="max-height: 350px; min-height: 300px;background: linear-gradient(45deg,rgba(37, 51, 79, 1) 16%,rgba(116, 127, 150, 1) 99%)">
-                            <div class="text-center py-1 text-white align-self-center" style="font-size: 24px; font-weight: bold;">
-                                CONTROL THE BUTTONS FROM YOUR COMPUTER
-                            </div>
-                            <div class="mx-auto text-center">
-                                <img src="images/computer_tr.png" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="supported-apps">
-                <div class="container px-4 py-5 pb-3">
-                    <h2 class="pb-2 border-bottom">Supported Apps</h2>
-                
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-                        <div class="col text-center">
-                            <div class="card card-discord border-0 rounded-4 px-1 pt-5">
-                                <i class="fa-brands fa-discord fa-2xl pb-3" style="color: #5662f6;"></i>
-                                <div>
-                                    <h3>Discord</h3>
-                                    <p>Mikrofonu susturma, kulaklığı sağırlaştırma.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center">
-                            <div class="card card-spotify border-0 rounded-4 pt-5">
-                                <i class="fa-brands fa-spotify fa-2xl pb-3" style="color: #1ed760;"></i>
-                                <div>
-                                    <h3>Spotify</h3>
-                                    <p>Şarkı başlatma, durdurma, devam ettirme.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center">
-                            <div class="card card-twitch border-0 rounded-4 pt-5">
-                                <i class="fa-brands fa-twitch fa-2xl pb-3" style="color: #a970ff;"></i>
-                                <div>
-                                    <h3>Twitch</h3>
-                                    <p>Yayın başlatma, durdurma, devam ettirme.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col text-center">
-                            <div class="card card-obs border-0 rounded-4" style="padding-top: 1.7rem;">
-                                <img src="images/obs_logo.svg" height="35px">
-                                <div>
-                                    <h3>OBS</h3>
-                                    <p>Kaydı başlatma, durdurma, devam ettirme özellikleri.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="platform-and-download">
-                <div class="container px-4 py-5">
-                    <h2 class="pb-2 border-bottom">Supported Platforms</h2>
-                    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-                        <div class="col d-flex align-items-start">
-                            <div class="icon-square text-body-emphasis bg-primary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 rounded-3">
-                                <i class="fa-brands fa-windows p-2"></i>
-                            </div>
-                            <div>
-                            <h3 class="fs-2 text-body-emphasis">Windows</h3>
-                            <p>Uygulamayı indirip telefon arayüzündeki butonları yönetin.</p>
-                            <a href="document.html" class="btn btn-primary p-2">
-                                <i class="fa fa-download p-2"></i>
-                                Download for Windows
-                            </a>
-                            </div>
-                        </div>
-                        <div class="col d-flex align-items-start">
-                            <div class="icon-square text-body-emphasis bg-success d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 rounded-3">
-                                <i class="fa-brands fa-android p-2"></i>
-                            </div>
-                            <div>
-                            <h3 class="fs-2 text-body-emphasis">Android</h3>
-                            <p>ControlHub'ı Android cihazınıza indirin ve bilgisayardan oluşturduğunuz kısayolları kullanın.</p>
-                            <a href="https://play.google.com/store/apps/dev?id=5700313618786177705&hl=en" class="btn btn-success">
-                                <i class="fa-brands fa-google-play p-2"></i>
-                                Download for Android
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                        <svg class="bi" width="30" height="24">
-                            <use xlink:href="#bootstrap"></use>
-                        </svg>
+                </li>
+                <li class="ms-3">
+                    <a class="text-body-secondary" href="#">
+                        <i class="fa-brands fa-square-instagram"></i>
                     </a>
-                    <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Weepdex, Inc</span>
-                </div>
+                </li>
+                <li class="ms-3">
+                    <a class="text-body-secondary" href="#">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3">
-                        <a class="text-body-secondary" href="#">
-                            <i class="fa-brands fa-square-x-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="ms-3">
-                        <a class="text-body-secondary" href="#">
-                            <i class="fa-brands fa-square-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="ms-3">
-                        <a class="text-body-secondary" href="#">
-                            <i class="fa-brands fa-square-facebook"></i>
-                        </a>
-                    </li>
-                </ul>
-            </footer>
-        </div>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-        <script src="js/script.js"></script>
+    <script>
+        var language;
+        var textElements = {
+            'teltext': 'teltext',
+            'laptoptext': 'laptoptext',
+            'navlinkmain': 'navlinkmain',
+            'navlinksupapps': 'navlinksupapps',
+            'navlinkdownload': 'navlinkdownload',
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
-    </body>
+            'supportedappsheader': 'supportedappsheader',
+            'dc': 'dc',
+            'spotify': 'spotify',
+            'twitch': 'twitch',
+            'obs': 'obs',
+
+            'downloadheader': 'downloadheader',
+            'windows': 'windows',
+            'windowsbtn': 'windowsbtn',
+            'android': 'android',
+            'androidbtn': 'androidbtn',
+        };
+
+        function getLanguage() {
+            var lang = localStorage.getItem("language");
+            if (lang == null) {
+                setLanguage("tr");
+            } else {
+                loadLanguage();
+            }
+        }
+
+        function setLanguage(lang) {
+            localStorage.setItem("language", lang);
+            loadLanguage();
+        }
+
+        function loadLanguage() {
+            $.getJSON("languages/" + localStorage.getItem("language") + ".json")
+                .done(function (lang) {
+                    language = lang;
+                    updateText();
+                });
+        }
+
+        function updateText() {
+            for (var elementId in textElements) {
+                $('#' + elementId).text(language[textElements[elementId]]);
+            }
+
+            var selectedLang = localStorage.getItem("language");
+            $('#languageSelect').val(selectedLang);
+        }
+
+        $(document).ready(function () {
+            getLanguage();
+        });
+    </script>
+</body>
+
 </html>
