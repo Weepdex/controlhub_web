@@ -3,37 +3,74 @@
     src: url(/fonts/OmegaSans.ttf);
 }
 
+[data-bs-theme="dark"]{
+    ::-webkit-scrollbar {
+        width: 10px;
+        border-radius: 8px; /* Köşeleri yuvarlaştırın */
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #2b3035;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #7b7b7b;
+        border-radius: 8px; /* Köşeleri yuvarlaştırın */
+    }
+    
+    ::-o-scrollbar{
+        width: 10px;
+        border-radius: 8px; /* Köşeleri yuvarlaştırın */
+    }
+    
+    /* Opera için scrollbar thumb özelleştirmesi */
+    ::-o-scrollbar-thumb {
+        background: #7b7b7b;
+        border-radius: 8px; /* Köşeleri yuvarlaştırın */
+    }
+    
+    /* Opera için scrollbar track özelleştirmesi */
+    ::-o-scrollbar-track {
+        background: #2b3035;
+        border-radius: 8px; /* Köşeleri yuvarlaştırın */
+    }
+}
+
+[data-bs-theme="light"]{
+    ::-webkit-scrollbar {
+        width: 10px;
+        border-radius: 8px; /* Köşeleri yuvarlaştırın */
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f8f9fa;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #7b7b7b;
+        border-radius: 8px; /* Köşeleri yuvarlaştırın */
+    }
+    
+    ::-o-scrollbar{
+        width: 10px;
+        border-radius: 8px; /* Köşeleri yuvarlaştırın */
+    }
+    
+    /* Opera için scrollbar thumb özelleştirmesi */
+    ::-o-scrollbar-thumb {
+        background: #7b7b7b;
+        border-radius: 8px; /* Köşeleri yuvarlaştırın */
+    }
+    
+    /* Opera için scrollbar track özelleştirmesi */
+    ::-o-scrollbar-track {
+        background: #f8f9fa;
+        border-radius: 8px; /* Köşeleri yuvarlaştırın */
+    }
+}
+
 /* Scrollbar'ların köşe yuvarlamasını etkinleştirin ve yuvarlama miktarını ayarlayın */
-::-webkit-scrollbar {
-    width: 10px;
-    border-radius: 8px; /* Köşeleri yuvarlaştırın */
-}
 
-::-webkit-scrollbar-track {
-    background: #212529;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #7b7b7b;
-    border-radius: 8px; /* Köşeleri yuvarlaştırın */
-}
-
-::-o-scrollbar{
-    width: 10px;
-    border-radius: 8px; /* Köşeleri yuvarlaştırın */
-}
-
-/* Opera için scrollbar thumb özelleştirmesi */
-::-o-scrollbar-thumb {
-    background: #7b7b7b;
-    border-radius: 8px; /* Köşeleri yuvarlaştırın */
-}
-
-/* Opera için scrollbar track özelleştirmesi */
-::-o-scrollbar-track {
-    background: #212529;
-    border-radius: 8px; /* Köşeleri yuvarlaştırın */
-}
 
 html{
     scroll-behavior: smooth;
