@@ -10,23 +10,23 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #484848;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #7b7b7b;
     border-radius: 10px; /* Köşeleri yuvarlaştırın */
 }
 
 /* Opera için scrollbar thumb özelleştirmesi */
 ::-o-scrollbar-thumb {
-    background: #888;
+    background: #7b7b7b;
     border-radius: 10px; /* Köşeleri yuvarlaştırın */
 }
 
 /* Opera için scrollbar track özelleştirmesi */
 ::-o-scrollbar-track {
-    background: #f1f1f1;
+    background: #484848;
     border-radius: 10px; /* Köşeleri yuvarlaştırın */
 }
 
