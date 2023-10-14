@@ -3,9 +3,19 @@
     src: url(/fonts/OmegaSans.ttf);
 }
 
-::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+//Scrollbar arkası
+::-webkit-scrollbar-track {
+    background: #484848;
+}
+
+//Scrollbar kendisi
+::-webkit-scrollbar-thumb {
+    background: #7b7b7b;
+    border-radius: 10px;
 }
 
 html{
