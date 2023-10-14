@@ -3,6 +3,10 @@
     src: url(/fonts/OmegaSans.ttf);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* body{
     font-family: OmegaSans;
 }
