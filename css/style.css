@@ -5,29 +5,34 @@
 
 /* Scrollbar'ların köşe yuvarlamasını etkinleştirin ve yuvarlama miktarını ayarlayın */
 ::-webkit-scrollbar {
-    width: 12px;
-    border-radius: 10px; /* Köşeleri yuvarlaştırın */
+    width: 10px;
+    border-radius: 8px; /* Köşeleri yuvarlaştırın */
 }
 
 ::-webkit-scrollbar-track {
-    background: #484848;
+    background: #212529;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #7b7b7b;
-    border-radius: 10px; /* Köşeleri yuvarlaştırın */
+    border-radius: 8px; /* Köşeleri yuvarlaştırın */
+}
+
+::-o-scrollbar{
+    width: 10px;
+    border-radius: 8px; /* Köşeleri yuvarlaştırın */
 }
 
 /* Opera için scrollbar thumb özelleştirmesi */
 ::-o-scrollbar-thumb {
     background: #7b7b7b;
-    border-radius: 10px; /* Köşeleri yuvarlaştırın */
+    border-radius: 8px; /* Köşeleri yuvarlaştırın */
 }
 
 /* Opera için scrollbar track özelleştirmesi */
 ::-o-scrollbar-track {
-    background: #484848;
-    border-radius: 10px; /* Köşeleri yuvarlaştırın */
+    background: #212529;
+    border-radius: 8px; /* Köşeleri yuvarlaştırın */
 }
 
 html{
