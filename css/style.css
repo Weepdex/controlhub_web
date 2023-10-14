@@ -3,19 +3,31 @@
     src: url(/fonts/OmegaSans.ttf);
 }
 
-::-webkit-scrollbar{
-    width: 10px;
+/* Scrollbar'ların köşe yuvarlamasını etkinleştirin ve yuvarlama miktarını ayarlayın */
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 10px; /* Köşeleri yuvarlaştırın */
 }
 
-//Scrollbar arkası
 ::-webkit-scrollbar-track {
-    background: #484848;
+    background: #f1f1f1;
 }
 
-//Scrollbar kendisi
 ::-webkit-scrollbar-thumb {
-    background: #7b7b7b;
-    border-radius: 10px;
+    background: #888;
+    border-radius: 10px; /* Köşeleri yuvarlaştırın */
+}
+
+/* Opera için scrollbar thumb özelleştirmesi */
+::-o-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px; /* Köşeleri yuvarlaştırın */
+}
+
+/* Opera için scrollbar track özelleştirmesi */
+::-o-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px; /* Köşeleri yuvarlaştırın */
 }
 
 html{
