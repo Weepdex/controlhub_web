@@ -1,0 +1,6 @@
+[book]
+authors = ["Halil İbrahim"]
+language = "en"
+multilingual = false
+src = "src"
+title = "ControlHub Dokümantasyonu"
